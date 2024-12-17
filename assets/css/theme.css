@@ -1937,13 +1937,13 @@ body:not(.tt-boxed) .page-header-inner,
 	body:not(.ph-image-on) #page-header .page-header-inner,
 	body.ph-image-on.ph-bg-image-on #page-header:not(.project-info-list-on) .page-header-inner {
 		padding-top: 200px;
-		padding-bottom: 80px;
+		/* padding-bottom: 80px; */
 	}
 }
 @media (max-width: 540px) {
 	body.ph-image-on #page-header:not(.project-info-list-on) .page-header-inner {
 		padding-top: 240px;
-		padding-bottom: 40vw;
+		/* padding-bottom: 40vw; */
 	}
 }
 
@@ -1989,6 +1989,28 @@ body:not(.tt-boxed) .page-header-inner,
 	position: relative;
 	width: 100%;
 }
+
+/* @media (max-width: 1024px) {
+	.ph-image-inner {
+		display: none;
+	}
+} */
+
+/* Esconde a imagem mobile por padrão */
+.mobile {
+    display: none;
+}
+
+/* Exibe a imagem mobile e esconde a desktop em telas menores */
+@media (max-width: 768px) {
+    .desktop {
+        display: none;
+    }
+    .mobile {
+        display: block;
+    }
+}
+
 
 /* Video */
 #page-header:not(.ph-image-cropped) .ph-video-wrap {

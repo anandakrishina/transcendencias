@@ -7398,6 +7398,9 @@ body:not(.tt-magic-cursor) .social-buttons > ul > li a:hover {
  * tt-Accordion
 /* ------------------------------------------------------------- */
 
+
+
+
 .tt-accordion {
 	position: relative;
 }
@@ -7427,6 +7430,7 @@ body:not(.tt-magic-cursor) .social-buttons > ul > li a:hover {
 		font-size: 28px;
 	}
 }
+
 
 /* Accordion heading subtext */
 .tt-accordion-subtext {
@@ -9651,27 +9655,27 @@ body.tt-boxed .blog-single-inner.tt-wrap {
 
 /* tt-Comments */
 .tt-comment {
+    display: flex; /* Ativa o Flexbox */
+	flex-wrap: wrap;
+    align-items: center; /* Alinha verticalmente */
+    gap: 20px; /* Espaçamento entre a imagem e o texto */
 }
 
-/* tt-Comments avatar */
 .tt-comment-avatar {
-	position: relative;
-	display: inline-block;
-	float: left;
-	width: 50px;
-	height: 50px;
-	margin-right: 20px;
-	overflow: hidden;
-	border-radius: 100px;
+    width: 300px;
+    height: 100%;
+    overflow: hidden;
+    flex-shrink: 0; /* Evita que a imagem diminua */
 }
+
 .tt-comment-avatar img {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-	object-position: 50% 50%;
+    width: 100%;
+    height: 100%;
+     object-fit: cover;
+}
+
+.tt-comment-text {
+    flex: 5; /* O texto ocupa o espaço restante */
 }
 .tt-comment-avatar:hover {
 	opacity: .9;
